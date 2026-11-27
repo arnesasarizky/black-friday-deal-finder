@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Midnight Deals — Black Friday Deal Finder 2026</title>
+<meta name="description" content="68 real Black Friday 2026 deals, checked 27 Nov 2026 at Amazon, Best Buy, Walmart, Target and more. Search, filter and sort by the biggest real discount.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">&#9790;</span>
+      <div>
+        <h1>Midnight Deals</h1>
+        <p class="tagline">Black Friday 2026 &middot; the deals worth your money, checked today</p>
+      </div>
+    </div>
+    <div class="masthead-stats" id="mastheadStats">
+      <div class="stat"><span class="stat-num" id="statDeals">&ndash;</span><span class="stat-label">deals tracked</span></div>
+      <div class="stat"><span class="stat-num" id="statSavings">&ndash;</span><span class="stat-label">total savings</span></div>
+      <div class="stat"><span class="stat-num stat-checked">27 Nov 2026</span><span class="stat-label">prices checked</span></div>
+    </div>
+  </div>
+</header>
+
+<main id="listView">
+  <section class="best" aria-label="Best deals right now">
+    <div class="section-head">
+      <h2>Best deals right now</h2>
+      <p>Top 5 by verdict, then by discount. New lows first.</p>
+    </div>
+    <ol class="best-strip" id="bestStrip"></ol>
+  </section>
+
+  <section class="controls" aria-label="Search and filter deals">
+    <input id="searchBox" type="search" placeholder="Search deals — try &ldquo;AirPods&rdquo;, &ldquo;OLED&rdquo;, &ldquo;LEGO&rdquo;&hellip;" aria-label="Search deals" autocomplete="off">
+    <div class="chip-row" id="categoryChips" role="group" aria-label="Filter by category"></div>
+    <div class="filter-row">
+      <label class="filter-label">Store
+        <select id="storeFilter" aria-label="Filter by store"></select>
+      </label>
+      <div class="discount-chips" id="discountChips" role="group" aria-label="Filter by minimum discount">
+        <button type="button" data-min="0" class="discount-chip active">Any discount</button>
+        <button type="button" data-min="20" class="discount-chip">&ge;20% off</button>
+        <button type="button" data-min="30" class="discount-chip">&ge;30% off</button>
+        <button type="button" data-min="40" class="discount-chip">&ge;40% off</button>
+        <button type="button" data-min="50" class="discount-chip">&ge;50% off</button>
+      </div>
+      <label class="filter-label">Sort by
+        <select id="sortSelect" aria-label="Sort deals">
+          <option value="pct">Biggest discount %</option>
+          <option value="save">Biggest saving $</option>
+          <option value="priceAsc">Price: low to high</option>
+          <option value="priceDesc">Price: high to low</option>
+        </select>
+      </label>
+    </div>
+  </section>
+
+  <p class="results-line" id="resultsLine"></p>
+  <section class="deal-grid" id="dealGrid" aria-label="Deals"></section>
+  <p class="empty-note" id="emptyNote" hidden>No deals match those filters. Loosen a filter or clear the search.</p>
+</main>
+
+<main id="detailView" hidden></main>
+
+<footer class="site-footer">
+  <p><strong>How these prices were checked.</strong> Every deal on this page was read on 27 Nov 2026 at the store named on its card, or in a deals roundup that names that store. The discount on each card is computed from the two prices shown, so the numbers always add up. The verdict says whether the price is really a deal: <strong>NEW LOW</strong> is the lowest price tracked for that item, <strong>STRONG DEAL</strong> is a deep cut on a real price, <strong>ROUTINE</strong> is a sale that matches an earlier price, and <strong>INFLATED</strong> is a discount measured against a raised list price.</p>
+  <p>Midnight Deals is an independent deal finder. Store names belong to their owners; prices change, so check the store before you buy. Prices checked 27 Nov 2026.</p>
+</footer>
+
+<script type="module" src="./app.js"></script>
+</body>
+</html>
